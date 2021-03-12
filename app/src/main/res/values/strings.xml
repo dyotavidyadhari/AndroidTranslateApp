@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">AndroidTranslate</string>
+    
+    <string-array name="spinner_bahasa">
+        <item>en</item>
+        <item>id</item>
+        <item>uk</item>
+        <item>th</item>
+        <item>ru</item>
+        <item>es</item>
+        <item>jw</item>
+        <item>hu</item>
+        <item>ja</item>
+        <item>it</item>
+        <item>sv</item>
+        <item>ne</item>
+    </string-array>
+    
+</resources>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2C053530"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#E9F8F6"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingHorizontal="8dp"
+        >
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Source Language"
+                android:textColor="#777777"
+                android:textSize="12dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Target Language"
+                android:textColor="#777777"
+                android:layout_marginLeft="147dp"
+                android:textSize="12dp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <Spinner
+                android:id="@+id/spnAwal"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonSwap"
+                android:layout_width="54dp"
+                android:layout_height="60dp"
+                android:layout_marginHorizontal="16dp"
+                app:backgroundTint="#AE053530"
+                app:cornerRadius="100dp"
+                app:icon="@drawable/tukar"
+                android:clickable="true"
+                app:iconTint="#FFFFFF" />
+
+            <Spinner
+                android:id="@+id/spnTujuan"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+
+                 />
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/sourceText"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:background="#17053530"
+            android:textDirection="ltr"
+            android:padding="8dp"
+            android:hint="Text" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnVoice"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:paddingLeft="35dp"
+            android:text="Button"
+            android:tint="#BBE3DE"
+            app:cornerRadius="100in"
+            app:icon="@drawable/ic_baseline_keyboard_voice_24"
+            app:iconSize="32dp"
+            android:clickable="true"
+            app:iconTint="#E1EDEC" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnTranslate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Translate"
+            android:textColor="@color/white"
+            app:backgroundTint="#AE053530"
+             />
+
+        <TextView
+            android:id="@+id/txtHistory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="10dp"
+            android:text="Search History"
+            android:textSize="18dp" />
+
+        <ListView
+            android:id="@+id/daftarHistory"
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            android:background="#3B053530" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>
