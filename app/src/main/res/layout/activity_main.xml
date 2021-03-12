@@ -43,7 +43,9 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+
+            >
 
 
             <Spinner
@@ -51,7 +53,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                />
+
+                android:background="#AE053530" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/buttonSwap"
@@ -70,7 +73,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
 
-                 />
+                android:background="#AE053530"
+                android:dropDownSelector="#AE053530" />
         </LinearLayout>
 
         <com.google.android.material.textfield.TextInputEditText
@@ -81,7 +85,9 @@
             android:layout_marginBottom="8dp"
             android:background="#17053530"
             android:textDirection="ltr"
+            android:textColor="#808080"
             android:padding="8dp"
+            android:textColorHint="#808080"
             android:hint="Text" />
 
         <com.google.android.material.button.MaterialButton
@@ -89,7 +95,6 @@
             android:layout_width="100dp"
             android:layout_height="60dp"
             android:paddingLeft="35dp"
-            android:text="Button"
             android:tint="#BBE3DE"
             app:cornerRadius="100in"
             app:icon="@drawable/ic_baseline_keyboard_voice_24"
@@ -113,13 +118,16 @@
             android:layout_height="wrap_content"
             android:paddingVertical="10dp"
             android:text="Search History"
+            android:textColor="#808080"
             android:textSize="18dp" />
 
         <ListView
             android:id="@+id/daftarHistory"
             android:layout_width="match_parent"
             android:layout_height="210dp"
-            android:background="#3B053530" />
+            android:background="#3B053530"
+
+            />
 
 
     </LinearLayout>

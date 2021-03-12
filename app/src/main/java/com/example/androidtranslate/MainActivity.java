@@ -55,6 +55,9 @@ public class MainActivity extends AppCompatActivity {
     TextInputEditText masukanKata;
     MaterialButton buttonTrans, btnSwap, buttonVoice;
     TextView tampilkan;
+
+    DB_Controller controller;
+
     private ArrayAdapter<CharSequence> aAdapter, bAdapter;
 
     @Override
@@ -62,6 +65,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         daftarHis = (ListView) findViewById(R.id.daftarHistory);
+
+        controller = new DB_Controller(this,"",null,1);
 
         buttonTrans = (MaterialButton) findViewById(R.id.btnTranslate);
         buttonVoice = (MaterialButton) findViewById(R.id.btnVoice);
@@ -166,6 +171,12 @@ public class MainActivity extends AppCompatActivity {
 
                                     startActivity(translateto);
 
+                                controller.insert_student(userInputSpinnerSource,
+                                        userInputSpinnerTarget,
+                                        bhs,
+                                        inputWord
+                                );
+
 
                             }catch (final JSONException e){
                                 e.printStackTrace();
@@ -176,6 +187,9 @@ public class MainActivity extends AppCompatActivity {
                 });
             }
         });
+
+
+        daftarHis.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, controller.list_all_students()));
 
     }
 
