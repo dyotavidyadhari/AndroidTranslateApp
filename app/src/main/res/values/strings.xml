@@ -1,6 +1,11 @@
 <resources>
-    <string name="app_name">AndroidTranslate</string>
-    
+    <string name="app_name">KuyTranslate</string>
+    <string name="created_by"><![CDATA[Created by Rachel & Vidya]]></string>
+    <string name="source_language">Source Language</string>
+    <string name="text">Text</string>
+    <string name="translate">translate</string>
+    <string name="search_history">Search History</string>
+
     <string-array name="spinner_bahasa">
         <item>en</item>
         <item>id</item>
@@ -14,5 +19,5 @@
         <item>sv</item>
         <item>ne</item>
     </string-array>
-    
+
 </resources>

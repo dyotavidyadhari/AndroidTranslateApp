@@ -13,6 +13,9 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
@@ -52,8 +55,9 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG = "Response";
     Spinner spinAwal, spinTujuan;
     ListView daftarHis;
-    TextInputEditText masukanKata;
-    MaterialButton buttonTrans, btnSwap, buttonVoice;
+    EditText masukanKata;
+    Button buttonTrans;
+    ImageView btnSwap, buttonVoice;
     TextView tampilkan;
 
     DB_Controller controller;
@@ -68,16 +72,16 @@ public class MainActivity extends AppCompatActivity {
 
         controller = new DB_Controller(this,"",null,1);
 
-        buttonTrans = (MaterialButton) findViewById(R.id.btnTranslate);
-        buttonVoice = (MaterialButton) findViewById(R.id.btnVoice);
+        buttonTrans = (Button) findViewById(R.id.btnTranslate);
+        buttonVoice = (ImageView) findViewById(R.id.btnVoice);
         tampilkan = (TextView) findViewById(R.id.txtHistory);
         spinAwal = (Spinner) findViewById(R.id.spnAwal);
         spinTujuan = (Spinner) findViewById(R.id.spnTujuan);
-        btnSwap = (MaterialButton) findViewById(R.id.buttonSwap);
+        btnSwap = (ImageView) findViewById(R.id.buttonSwap);
 
         final Intent buttonBack = getIntent();
 
-        masukanKata = (TextInputEditText) findViewById(R.id.sourceText);
+        masukanKata = (EditText) findViewById(R.id.sourceText);
 
         aAdapter = ArrayAdapter.createFromResource(this,
                 R.array.spinner_bahasa, android.R.layout.simple_spinner_item);

@@ -1,9 +1,9 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.AndroidTranslate" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.AndroidTranslate" parent="Theme.MaterialComponents.DayNight">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">#053530</item>
-        <item name="colorPrimaryVariant">#053530</item>
+        <item name="colorPrimary">#F77F00</item>
+        <item name="colorPrimaryVariant">#EDA10E</item>
         <item name="colorOnPrimary">#053530</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>

@@ -4,13 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E9F8F6"
+    android:background="@color/white"
     tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#E9F8F6"
         android:orientation="vertical"
         android:paddingHorizontal="8dp"
         android:layout_marginTop="60dp">
@@ -25,8 +24,9 @@
                 android:id="@+id/textViewSource"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/textblue"
                 android:text="Source"
-                android:textSize="32dp"
+                android:textSize="20dp"
                 />
 
             <ImageView
@@ -59,16 +59,16 @@
                 android:id="@+id/textViewTarget"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/textblue"
                 android:text="Target"
-                android:textSize="32dp"
+                android:textSize="20dp"
                 />
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="8dp"
-                android:src="@drawable/ic_baseline_volume_up_24"
-                />
+                android:src="@drawable/ic_baseline_volume_up_24" />
 
         </LinearLayout>
 
@@ -85,15 +85,6 @@
             android:textSize="20dp"
             android:hint="Text" />
 
-        <androidx.appcompat.widget.AppCompatImageButton
-            android:id="@+id/btnBack"
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:layout_marginBottom="30dp"
-            android:clickable="true"
-            app:backgroundTint="#AE053530"
-            android:src="@drawable/ic_baseline_arrow_back_ios_24"
-            android:tint="#FFFFFF" />
 
 
     </LinearLayout>

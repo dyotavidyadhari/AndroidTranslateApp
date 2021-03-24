@@ -1,5 +1,6 @@
 package com.example.androidtranslate;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatImageButton;
 
@@ -8,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 import com.google.android.material.textfield.TextInputEditText;
 
@@ -24,11 +26,17 @@ public class ShowTranslation extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_translation);
 
+
+
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
         src = (TextView) findViewById(R.id.textViewSource);
         trgt = (TextView) findViewById(R.id.textViewTarget);
         viewinput = (TextInputEditText) findViewById(R.id.txtInput);
         viewoutput = (TextInputEditText) findViewById(R.id.txtOutput);
-        buttonBack = (AppCompatImageButton) findViewById(R.id.btnBack);
+        //buttonBack = (AppCompatImageButton) findViewById(R.id.btnBack);
         String hasil1, hasil2, taw;
 
 
@@ -45,15 +53,25 @@ public class ShowTranslation extends AppCompatActivity {
 
         //AddData(hasil1);
 
-        buttonBack.setOnClickListener(new View.OnClickListener() {
+       /* buttonBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent btnBack = new Intent(ShowTranslation.this,MainActivity.class);
                 startActivity(btnBack);
             }
-        });
+        });*/
 
     }
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        startActivity(new Intent(getApplicationContext(),MainActivity.class));
+        return true;
+    }
+
+
+
+
     /*
     private void AddData(String taw) {
         boolean insertData = myDB.addData(taw);
