@@ -11,8 +11,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:paddingHorizontal="8dp"
-        android:layout_marginTop="60dp">
+        android:layout_margin="20dp"
+       >
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -30,10 +30,10 @@
                 />
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
                 android:layout_marginLeft="8dp"
-                android:src="@drawable/ic_baseline_volume_up_24"
+                android:src="@drawable/sound"
                 />
 
         </LinearLayout>
@@ -65,10 +65,10 @@
                 />
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
                 android:layout_marginLeft="8dp"
-                android:src="@drawable/ic_baseline_volume_up_24" />
+                android:src="@drawable/sound" />
 
         </LinearLayout>
 
