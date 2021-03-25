@@ -26,6 +26,7 @@ import android.widget.Toast;
 
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.firebase.messaging.FirebaseMessaging;
 
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONArray;
@@ -50,6 +51,7 @@ import okhttp3.RequestBody;
 import okhttp3.Response;
 
 public class MainActivity extends AppCompatActivity {
+
     //DataBaseHelper myDB;
     private static final int REUEST_CODE_SPEECH_INPUT = 1;
     private static final String TAG = "Response";
@@ -69,7 +71,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         daftarHis = (ListView) findViewById(R.id.daftarHistory);
-
+        //PUSH NOTIF
+        FirebaseMessaging.getInstance().subscribeToTopic("androidtranslate");
+        //PUSH NOTIF
         controller = new DB_Controller(this,"",null,1);
 
         buttonTrans = (Button) findViewById(R.id.btnTranslate);

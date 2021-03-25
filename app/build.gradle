@@ -1,5 +1,6 @@
 plugins {
     id 'com.android.application'
+    id 'com.google.gms.google-services'
 }
 
 android {
@@ -40,6 +41,9 @@ dependencies {
     implementation("com.squareup.okhttp3:okhttp:4.9.0")
     implementation 'com.squareup.okhttp3:okhttp:3.11.0'
     implementation("com.squareup.okhttp3:okhttp")
+    implementation platform('com.google.firebase:firebase-bom:26.6.0')
+    implementation 'com.google.firebase:firebase-messaging:21.0.1'
+    implementation 'com.google.firebase:firebase-analytics'
     //implementation("com.squareup.okhttp3:logging-interceptor")
 
     testImplementation 'junit:junit:4.+'

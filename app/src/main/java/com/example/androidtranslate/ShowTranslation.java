@@ -7,6 +7,8 @@ import androidx.appcompat.widget.AppCompatImageButton;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.Toolbar;
@@ -18,6 +20,7 @@ import java.util.ArrayList;
 public class ShowTranslation extends AppCompatActivity {
     TextView src,trgt, alternativeSugg;
     TextInputEditText viewinput, viewoutput;
+
     AppCompatImageButton buttonBack;
     //DataBaseHelper myDB;
 
@@ -25,6 +28,7 @@ public class ShowTranslation extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_translation);
+
 
 
 

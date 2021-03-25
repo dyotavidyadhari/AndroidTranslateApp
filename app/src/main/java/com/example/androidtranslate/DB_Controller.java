@@ -55,7 +55,7 @@ public class DB_Controller extends SQLiteOpenHelper {
 
             cursor.moveToPosition(x);
 
-            ListData.add(cursor.getString(1)+" -> "+cursor.getString(4)+"\n  "+cursor.getString(2)+" -> "+cursor.getString(3));
+            ListData.add(cursor.getString(1)+" -> "+cursor.getString(4)+"\n"+cursor.getString(2)+" -> "+cursor.getString(3));
             //Lalu Memasukan Semua Datanya kedalam ArrayList
         }
 
@@ -63,5 +63,6 @@ public class DB_Controller extends SQLiteOpenHelper {
 
 
     }
+    
 
 }
