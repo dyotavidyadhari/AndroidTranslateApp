@@ -15,19 +15,22 @@
         android:orientation="horizontal">
         <Spinner
             android:id="@+id/spnAwal"
-            android:layout_width="115dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="35dp" />
         <ImageView
             android:id="@+id/buttonSwap"
             android:layout_height="35dp"
             android:layout_width="35dp"
+            android:layout_weight="0"
             android:layout_marginLeft="35dp"
             android:src="@drawable/sort"
             />
         <Spinner
             android:id="@+id/spnTujuan"
             android:layout_marginLeft="35dp"
-            android:layout_width="115dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="35dp" />
 
     </LinearLayout>
