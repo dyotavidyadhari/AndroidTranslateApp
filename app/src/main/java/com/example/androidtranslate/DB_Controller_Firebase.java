@@ -45,6 +45,7 @@ public class DB_Controller_Firebase extends SQLiteOpenHelper {
 
 
 
+
     public ArrayList<String> list_all_students(){
         Cursor cursor = this.getReadableDatabase().rawQuery("SELECT * FROM TB_FIRE_MSG", null);
         ArrayList<String> ListData = new ArrayList<>();

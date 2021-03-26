@@ -60,7 +60,8 @@ public class Notification extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String chosen = listNotifikasi.getItemAtPosition(position).toString();
                 String[] list_chosen = chosen.split("\n",2);
-                showDialog(list_chosen[0], list_chosen[1]);
+               // showDialog(list_chosen[0], list_chosen[1]);
+                showDetail(list_chosen[0], list_chosen[1]);
             }
         });
     }
@@ -72,7 +73,12 @@ public class Notification extends AppCompatActivity {
         return true;
     }
     //
-
+    private void showDetail(String a, String b){
+        Intent details = new Intent(Notification.this,notification_detail.class);
+        details.putExtra("aa",a);
+        details.putExtra("bb",b);
+        startActivity(details);
+    }
 
 
     private void showDialogAll(){
@@ -124,8 +130,6 @@ public class Notification extends AppCompatActivity {
         switch (selectedMode){
             case R.id.delete:
                 showDialogAll();
-
-
         }
     }
 
