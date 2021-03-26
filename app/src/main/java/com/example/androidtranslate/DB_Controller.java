@@ -41,13 +41,6 @@ public class DB_Controller extends SQLiteOpenHelper {
     public ArrayList<String> list_all_students(){
         Cursor cursor = this.getReadableDatabase().rawQuery("SELECT * FROM TB_TRANSLATE", null);
         ArrayList<String> ListData = new ArrayList<>();
-        /*
-        textView.setText("");
-        while (cursor.moveToNext()){
-            textView.append(cursor.getString(1)+" "+cursor.getString(2)+"\n");
-        }
-
-         */
 
         cursor.moveToFirst();
 

@@ -25,11 +25,7 @@ public class MessagingService extends FirebaseMessagingService {
 
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
-        // ...
 
-
-        // TODO(developer): Handle FCM messages here.
-        // Not getting messages here? See why this may be: https://goo.gl/39bRNJ
         Log.d(TAG, "From: " + remoteMessage.getFrom());
 
         // Check if message contains a data payload.
@@ -81,7 +77,7 @@ public class MessagingService extends FirebaseMessagingService {
         Uri defaultSoundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
         NotificationCompat.Builder notificationBuilder =
                 new NotificationCompat.Builder(this)
-                        .setSmallIcon(R.mipmap.ic_launcher)
+                        .setSmallIcon(R.drawable.iconlauncher)
                         .setContentTitle(title)
                         .setContentText(messageBody)
                         .setAutoCancel(true)
@@ -92,8 +88,6 @@ public class MessagingService extends FirebaseMessagingService {
                 (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
         notificationManager.notify(0 /* ID of notification */, notificationBuilder.build());
 
-    // Also if you intend on generating your own notifications as a result of a received FCM
-    // message, here is where that should be initiated. See sendNotification method below.
 }
 
 }

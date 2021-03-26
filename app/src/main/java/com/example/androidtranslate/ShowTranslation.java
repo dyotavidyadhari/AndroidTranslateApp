@@ -51,18 +51,6 @@ public class ShowTranslation extends AppCompatActivity {
         viewinput.setText(hasil1);
         viewoutput.setText(hasil2);
 
-        //ytaw=hasil1;
-
-        //AddData(hasil1);
-
-       /* buttonBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent btnBack = new Intent(ShowTranslation.this,MainActivity.class);
-                startActivity(btnBack);
-            }
-        });*/
-
     }
     @Override
     public boolean onSupportNavigateUp() {
@@ -91,18 +79,4 @@ public class ShowTranslation extends AppCompatActivity {
         }
     }
 
-
-
-
-    /*
-    private void AddData(String taw) {
-        boolean insertData = myDB.addData(taw);
-        if (insertData == true) {
-            Toast.makeText(ShowTranslation.this, "Successfully entered data!", Toast.LENGTH_LONG).show();
-        } else {
-            Toast.makeText(ShowTranslation.this, "Something wrong", Toast.LENGTH_LONG).show();
-        }
-
-    }
-    */
 }

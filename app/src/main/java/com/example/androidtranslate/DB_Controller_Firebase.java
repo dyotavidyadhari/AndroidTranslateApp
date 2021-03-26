@@ -35,11 +35,11 @@ public class DB_Controller_Firebase extends SQLiteOpenHelper {
     }
 
     public void delete_notif(String a, String b){
-        this.getWritableDatabase().delete("TB_FIRE_MSG","title='"+a+"' && message='"+b+"'",null);
+        this.getWritableDatabase().delete("TB_FIRE_MSG","title='"+a+"'and message='"+b+"'",null);
     }
 
-    public void delete_all(String a, String b){
-        this.getWritableDatabase().delete("TB_FIRE_MSG","title='"+a+"' && message='"+b+"'",null);
+    public void delete_all(){
+        this.getWritableDatabase().delete("TB_FIRE_MSG",null,null);
     }
 
 
@@ -48,13 +48,6 @@ public class DB_Controller_Firebase extends SQLiteOpenHelper {
     public ArrayList<String> list_all_students(){
         Cursor cursor = this.getReadableDatabase().rawQuery("SELECT * FROM TB_FIRE_MSG", null);
         ArrayList<String> ListData = new ArrayList<>();
-        /*
-        textView.setText("");
-        while (cursor.moveToNext()){
-            textView.append(cursor.getString(1)+" "+cursor.getString(2)+"\n");
-        }
-
-         */
 
         cursor.moveToFirst();
 
