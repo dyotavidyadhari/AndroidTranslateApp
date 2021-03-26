@@ -98,6 +98,9 @@ public class Notification extends AppCompatActivity {
 
                         controller.delete_all();
                         Notification.this.finish();
+
+                        Intent back = new Intent(Notification.this,Notification.class);
+                        startActivity(back);
                     }
                 })
                 .setNegativeButton("No",new DialogInterface.OnClickListener() {
