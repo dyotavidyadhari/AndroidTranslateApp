@@ -13,10 +13,12 @@
         android:roundIcon="@drawable/iconlauncher"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidTranslate">
+        <activity android:name=".notification_detail"></activity>
         <activity android:name=".Notification">
             <intent-filter>
-                <action android:name="NOTIFICATION"/>
-                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="NOTIFICATION" />
+
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
 

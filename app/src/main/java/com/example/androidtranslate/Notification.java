@@ -22,6 +22,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 public class Notification extends AppCompatActivity {
     ListView listNotifikasi;
@@ -35,8 +36,10 @@ public class Notification extends AppCompatActivity {
         //back button
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setTitle("Notification");
 
         controller = new DB_Controller_Firebase(this,"",null,1);
+
 
         try{
         Bundle bundle = getIntent().getExtras();
@@ -70,39 +73,8 @@ public class Notification extends AppCompatActivity {
     }
     //
 
-    private void showDialog(final String a, final String b){
-        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
-                this);
 
-        // set title dialog
-        alertDialogBuilder.setTitle("Are you sure you want to delete this record?");
 
-        // set pesan dari dialog
-        alertDialogBuilder
-
-                .setIcon(R.drawable.remove)
-                .setCancelable(false)
-                .setPositiveButton("Yes",new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog,int id) {
-
-                        controller.delete_notif(a,b);
-                        Notification.this.finish();
-                    }
-                })
-                .setNegativeButton("No",new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-
-                        dialog.cancel();
-                    }
-                });
-
-        // membuat alert dialog dari builder
-        AlertDialog alertDialog = alertDialogBuilder.create();
-
-        // menampilkan alert dialog
-        alertDialog.show();
-
-    }
     private void showDialogAll(){
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
                 this);

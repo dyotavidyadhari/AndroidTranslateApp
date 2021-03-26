@@ -19,6 +19,11 @@ import com.google.firebase.messaging.RemoteMessage;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.Date;
+
+import static java.lang.Math.round;
+import static java.sql.Types.TIMESTAMP;
+
 public class MessagingService extends FirebaseMessagingService {
     private static final String TAG = "";
 
@@ -46,6 +51,9 @@ public class MessagingService extends FirebaseMessagingService {
             String message = remoteMessage.getNotification().getBody();
             String click_action = remoteMessage.getNotification().getClickAction();
 
+            //long time = new Date().getTime();
+            //long second = round(time/60000);
+
             Log.d(TAG, "Message Notification Title: " + title);
             Log.d(TAG, "Message Notification Body: " + message);
             Log.d(TAG, "Message Notification click: " + click_action);
@@ -71,6 +79,7 @@ public class MessagingService extends FirebaseMessagingService {
         intent.putExtra("title", title);
         intent.putExtra("message", messageBody);
 
+
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_ONE_SHOT);
 
 
@@ -89,5 +98,6 @@ public class MessagingService extends FirebaseMessagingService {
         notificationManager.notify(0 /* ID of notification */, notificationBuilder.build());
 
 }
+
 
 }
