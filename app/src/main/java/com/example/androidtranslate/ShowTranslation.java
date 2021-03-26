@@ -6,6 +6,8 @@ import androidx.appcompat.widget.AppCompatImageButton;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -28,11 +30,7 @@ public class ShowTranslation extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_translation);
-
-
-
-
-
+        //button back
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
@@ -71,6 +69,26 @@ public class ShowTranslation extends AppCompatActivity {
         onBackPressed();
         startActivity(new Intent(getApplicationContext(),MainActivity.class));
         return true;
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menubar, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        setMode(item.getItemId());
+        return super.onOptionsItemSelected(item);
+    }
+
+    private void setMode(int selectedMode) {
+        switch (selectedMode){
+            case R.id.notif:
+                Intent notif = new Intent(ShowTranslation.this,Notification.class);
+                startActivity(notif);
+        }
     }
 
 

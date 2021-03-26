@@ -62,7 +62,7 @@ public class DB_Controller_Firebase extends SQLiteOpenHelper {
 
             cursor.moveToPosition(x);
 
-            ListData.add(cursor.getString(1)+" -> "+cursor.getString(2));
+            ListData.add(cursor.getString(1)+"\n"+cursor.getString(2));
             //Lalu Memasukan Semua Datanya kedalam ArrayList
         }
 

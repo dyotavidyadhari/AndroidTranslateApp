@@ -6,6 +6,7 @@ import androidx.fragment.app.DialogFragment;
 
 import android.app.Dialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -25,20 +26,27 @@ public class Notification extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notification);
+        //back button
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         controller = new DB_Controller_Firebase(this,"",null,1);
 
-        TextView txttitle = findViewById(R.id.txttitle);
-        TextView txtmsg = findViewById(R.id.txtmsg);
+        //TextView txttitle = findViewById(R.id.txttitle);
+        //TextView txtmsg = findViewById(R.id.txtmsg);
+        try{
         Bundle bundle = getIntent().getExtras();
         String judul = bundle.getString("title");
         String isi = bundle.getString("message");
-        controller.insert_notif(judul,isi);
-        txttitle.setText(judul);
-        txtmsg.setText(isi);
-        if (bundle.getString("title")==null){
-            Log.w("heleeeee","heeeee");
+            if (bundle.getString("title")==null){
+                Log.w("null?","yes");
+            }
+        controller.insert_notif(judul,isi);} catch (Exception e) {
+            e.printStackTrace();
         }
+        //txttitle.setText(judul);
+        //txtmsg.setText(isi);
+
 
 
 
@@ -55,6 +63,15 @@ public class Notification extends AppCompatActivity {
             }
         });
     }
+    //back
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        startActivity(new Intent(getApplicationContext(),MainActivity.class));
+        return true;
+    }
+    //
+
     private void showDialog(){
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
                 this);
