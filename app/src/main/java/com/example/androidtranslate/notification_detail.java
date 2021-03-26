@@ -81,7 +81,7 @@ public class notification_detail extends AppCompatActivity {
                         String x = show.getStringExtra("aa");
                         String y = show.getStringExtra("bb");
                         controller.delete_notif(x,y);
-                       // notification_detail.this.finish();
+                        notification_detail.this.finish();
 
                         Intent back = new Intent(notification_detail.this,Notification.class);
                         startActivity(back);
